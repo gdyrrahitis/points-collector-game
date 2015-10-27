@@ -1,0 +1,15 @@
+﻿{
+    "Framework": "jasmine",
+    "TestHarnessReferenceMode": "AMD",
+    "TestHarnessLocationMode": "SettingsFileAdjacent",
+    "References": [
+        { "Path": "Libs/requirejs/require.js" },
+        { "Path": "Common.js" }
+    ],
+    "Tests": [
+        {
+            "Path": "Test"
+        }
+    ],
+    "TestFileTimeout": 7000
+}

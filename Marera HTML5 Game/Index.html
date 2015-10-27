@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Points Collector</title>
+    <link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="Css/Main.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="page-header">
+                <h1 class="text-center">HTML5 EaselJS Game!</h1>
+            </div>
+            <p class="lead text-center">Pick as many points as you can and get rewarded!</p>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <canvas id="canvas" width="800" height="480"></canvas>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 col-md-offset-5">
+                <div class="btn-group" role="group">
+                    <button class="btn btn-primary" id="StartGame">Start Game</button>
+                    <button class="btn btn-success btn-tool" id="Sound" disabled="disabled"><i class="fa fa-volume-up"></i></button>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="text-center">Copyright &copy; 2014 <a href="https://github.com/gdyrrahitis">Giorgos Dyrrahitis</a></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="Scripts/Libs/requirejs/require.js" data-main="Scripts/Common"></script>
+</body>
+</html>
