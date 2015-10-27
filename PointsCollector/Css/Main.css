@@ -1,0 +1,18 @@
+﻿body {
+    background: #ddd;
+}
+
+canvas {
+    border: 2px solid #808080;
+    border-style: outset;
+    display: block;
+    margin: 10px auto 10px auto;
+    background-color: #fff;
+}
+
+.btn:focus {
+outline: none;
+}
+.btn-tool {
+min-width: 39px;
+}
