@@ -204,8 +204,7 @@ define(["Game/Game", "Game/Scene", "Game/Spaceship", "jquery", "pub_sub", "easel
         $(document).on("click", "#StartGame", StartButtonHandler.bind(this, manifest));
         $(document).on("click", "#Sound", SoundManager);
         $("#Refresh").on("click", function () {
-            alert("feg");
-            //window.location.reload(true);
+            window.location.reload(true);
         });
     });
 });
