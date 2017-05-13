@@ -203,5 +203,8 @@ define(["Game/Game", "Game/Scene", "Game/Spaceship", "jquery", "pub_sub", "easel
         //event listeners on click events
         $(document).on("click", "#StartGame", StartButtonHandler.bind(this, manifest));
         $(document).on("click", "#Sound", SoundManager);
+        $(document).on("click", "#Refresh", function() {
+            location.reload(true);
+        });
     });
 });
