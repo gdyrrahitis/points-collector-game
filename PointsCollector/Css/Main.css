@@ -1,4 +1,7 @@
-﻿body {
+﻿@import "https://fonts.googleapis.com/css?family=Open+Sans:300,700";
+@import "https://fonts.googleapis.com/css?family=Kreon:300,700";
+
+body {
     background: #ddd;
 }
 
@@ -16,4 +19,11 @@ canvas {
 
 .btn-tool {
     min-width: 39px;
+}
+
+.easeljs {
+    text-shadow: 2px 2px 15px #2bb679;
+    text-rendering: geometricPrecision;
+    font-weight: bold;
+    font-family: kreon;
 }
