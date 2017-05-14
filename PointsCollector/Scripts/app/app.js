@@ -1,7 +1,7 @@
 ﻿/// <reference path="~/Scripts/Libs/requirejs/require.js"></reference>
 /// <reference path="~/Scripts/Libs/jquery/dist/jquery.js"></reference>
 /// <reference path="~/Scripts/Libs/EaselJS/lib/easeljs-0.7.1.combined.js"></reference>
-define(["Game/Game", "Game/Scene", "Game/Spaceship", "jquery", "pub_sub", "easeljs", "collision", "bootstrap", "github", "twitter"], function (Game, Scene, Spaceship) {
+define(["Game/Game", "Game/Scene", "Game/Spaceship", "jquery", "pub_sub", "easeljs", "collision", "bootstrap"], function (Game, Scene, Spaceship) {
     //the ticker event handler
     var tickerFn;
 

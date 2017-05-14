@@ -12,7 +12,6 @@ require.config({
         "pub_sub": "Libs/pub-sub",
         "collision": "Libs/Collision-Detection-for-EaselJS/src/ndgmr.Collision",
         "bootstrap": ["//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min"],
-        "github": ["//buttons.github.io/buttons"],
         "twitter": ["//platform.twitter.com/widgets"]
     },
     shim: {
@@ -24,5 +23,5 @@ require.config({
         "collision": { deps: ["easeljs"], exports: "ndgmr" },
         "bootstrap": { deps: ["jquery"] }
     },
-    deps: ['app/app']
+    deps: ["twitter", "app/app"]
 });
