@@ -11,9 +11,11 @@ require.config({
         "preloadjs": "Libs/PreloadJS/lib/preloadjs-0.4.1.combined",
         "pub_sub": "Libs/pub-sub",
         "collision": "Libs/Collision-Detection-for-EaselJS/src/ndgmr.Collision",
-        "bootstrap": ["//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min"]
+        "bootstrap": ["//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min"],
+        "github": ["//buttons.github.io/buttons"],
+        "twitter": ["//platform.twitter.com/widgets"]
     },
-    shims: {
+    shim: {
         "easeljs": { exports: "createjs" },
         "jquery": { exports: "$" },
         "tweenjs": { deps: ["easeljs"], exports: "Tween" },

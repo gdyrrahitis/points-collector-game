@@ -76,7 +76,6 @@
     <Content Include="Scripts\Game\Point.js" />
     <Content Include="Scripts\Game\Scene.js" />
     <Content Include="Scripts\Game\Spaceship.js" />
-    <Content Include="Scripts\Game\Test.js" />
     <Content Include="Scripts\Libs\Collision-Detection-for-EaselJS\example\assets\shelter.png" />
     <Content Include="Scripts\Libs\Collision-Detection-for-EaselJS\example\assets\star.png" />
     <Content Include="Scripts\Libs\Collision-Detection-for-EaselJS\example\assets\stars.png" />
@@ -444,7 +443,6 @@
     <Content Include="Scripts\Test\ObservableSpec.js" />
     <Content Include="Scripts\Test\PointSpec.js" />
     <Content Include="Scripts\Test\SceneSpec.js" />
-    <Content Include="Scripts\Test\simpleTests.js" />
     <Content Include="Scripts\Test\SpaceshipSpec.js" />
     <Content Include="Web.config" />
   </ItemGroup>
