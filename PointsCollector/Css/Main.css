@@ -11,8 +11,9 @@ canvas {
 }
 
 .btn:focus {
-outline: none;
+    outline: none;
 }
+
 .btn-tool {
-min-width: 39px;
+    min-width: 39px;
 }

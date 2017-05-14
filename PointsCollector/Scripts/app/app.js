@@ -1,7 +1,7 @@
 ﻿/// <reference path="~/Scripts/Libs/requirejs/require.js"></reference>
 /// <reference path="~/Scripts/Libs/jquery/dist/jquery.js"></reference>
 /// <reference path="~/Scripts/Libs/EaselJS/lib/easeljs-0.7.1.combined.js"></reference>
-define(["Game/Game", "Game/Scene", "Game/Spaceship", "jquery", "pub_sub", "easeljs", "collision"], function (Game, Scene, Spaceship) {
+define(["Game/Game", "Game/Scene", "Game/Spaceship", "jquery", "pub_sub", "easeljs", "collision", "bootstrap"], function (Game, Scene, Spaceship) {
     //the ticker event handler
     var tickerFn;
 
@@ -42,6 +42,15 @@ define(["Game/Game", "Game/Scene", "Game/Spaceship", "jquery", "pub_sub", "easel
         endScene.AddText();
         //set the main container on screen
         endScene.AddAllSceneComponents();
+
+        $("#Refresh").attr("disabled", false);
+        $("#Refresh").off("click").on("click", function () {
+            endScene.Clear();
+            createjs.Sound.removeAllSounds();
+            $("#Refresh").attr("disabled", true);
+            $("#StartGame").attr("disabled", false);
+            //window.location.reload(true);
+        });
     };
 
     /* The first game screen. It's an event listener.
@@ -52,10 +61,11 @@ define(["Game/Game", "Game/Scene", "Game/Spaceship", "jquery", "pub_sub", "easel
     var BeginGame = function (game, evt) {
         //initialize collision method for collision detection
         var collisionMethod = ndgmr.checkPixelCollision;
-
+        createjs.Ticker._inited = false;
+        createjs.Ticker.init();
         //listen for mute, continue sound events
-        $.subscribe("sound/mute", toggleMute)
-        $.subscribe("sound/continue", toggleMute)
+        $.subscribe("sound/mute", toggleMute);
+        $.subscribe("sound/continue", toggleMute);
 
         //create a scene
         var scene = new Scene();
@@ -110,10 +120,6 @@ define(["Game/Game", "Game/Scene", "Game/Spaceship", "jquery", "pub_sub", "easel
         flyingScene.AddComponent(spaceShip.ship);
         flyingScene.AddHUD();
 
-        //TODO:
-        // Na vrw enan tropo na ta katharisw ola epishs.
-        // Na prosthesw restart button. Tha prepei na katharisoun ola, events, components, scenes
-
         //update function
         tickerFn = createjs.Ticker.on("tick", function (evt) {
 
@@ -162,14 +168,18 @@ define(["Game/Game", "Game/Scene", "Game/Spaceship", "jquery", "pub_sub", "easel
     *   @evt: The event object for the handler
     */
     var StartButtonHandler = function (manifest, evt) {
-        //disable the button
+        $("#myModal").modal("show");
         $("#StartGame").attr("disabled", "disabled");
 
         //Initialize stage and kickoff the game
         var canvas = $("#canvas")[0];
         var game = new Game.Initialize(canvas, 0);
         game.SetFPS(60);
-        game.AssetLoader(manifest).then(BeginGame.bind(this, game), Fail);
+        game.Score = 0;
+        game.AssetLoader(manifest).then(function() {
+            $("#myModal").modal("hide");
+            BeginGame.bind(this, game)();
+        }, Fail);
     };
 
     /* Manages the sound for the application. Toggles the mute based on button click */
@@ -191,6 +201,8 @@ define(["Game/Game", "Game/Scene", "Game/Spaceship", "jquery", "pub_sub", "easel
 
     /* When the page loads */
     $(document).ready(function () {
+        $("span.copyright-date").text(new Date().getFullYear());
+
         //the manifest of the game resources
         var manifest = [
             { id: "sky", src: "Images/sky.png" },
@@ -203,8 +215,5 @@ define(["Game/Game", "Game/Scene", "Game/Spaceship", "jquery", "pub_sub", "easel
         //event listeners on click events
         $(document).on("click", "#StartGame", StartButtonHandler.bind(this, manifest));
         $(document).on("click", "#Sound", SoundManager);
-        $("#Refresh").on("click", function () {
-            window.location.reload(true);
-        });
     });
 });

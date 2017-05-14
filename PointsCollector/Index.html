@@ -3,9 +3,11 @@
 <head>
     <title>Points Collector</title>
     <link href='http://fonts.googleapis.com/css?family=Gloria+Hallelujah' rel='stylesheet' type='text/css'>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="Css/Main.css" rel="stylesheet"/>
+    <link href="Css/Main.css" rel="stylesheet" />
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </head>
 <body>
     <div class="container">
@@ -21,23 +23,52 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-6 col-md-offset-5">
-                <div class="btn-group" role="group">
+            <div class="col-md-12 text-center">
+                <div class="btn-group btn-group-lg" role="group">
                     <button class="btn btn-primary" id="StartGame">Start Game</button>
-                    <button class="btn btn-primary" id="Refresh"><i class="fa fa-refresh"></i></button>
+                    <button class="btn btn-primary" id="Refresh" disabled="disabled"><i class="fa fa-refresh"></i></button>
                     <button class="btn btn-success btn-tool" id="Sound" disabled="disabled"><i class="fa fa-volume-up"></i></button>
                 </div>
             </div>
         </div>
+        <hr />
         <footer>
             <div class="row">
                 <div class="col-md-12">
-                    <p class="text-center">Copyright &copy; 2014 <a href="https://github.com/gdyrrahitis">Giorgos Dyrrahitis</a></p>
+                    <p class="text-center">
+                        Made with love <i class="fa fa-heart"></i> by <a href="https://georgedyrra.wordpress.com/">Giorgos Dyrrahitis</a>
+                    </p>
+                    <p class="text-center">Year 2014</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="text-center">
+                        <a href="https://twitter.com/giorgosdyrra" class="twitter-follow-button" data-show-count="false">Follow @giorgosdyrra</a>
+                        <a class="github-button" href="https://github.com/gdyrrahitis" data-show-count="false" aria-label="Follow @gdyrrahitis on GitHub">Follow @gdyrrahitis</a>
+                    </p>
                 </div>
             </div>
         </footer>
     </div>
 
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" data-backdrop="static" data-keyboard="false" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Loading</h4>
+                </div>
+                <div class="modal-body">
+                    <small>Game is loading, please wait...</small>
+                    <div class="progress">
+                        <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="Scripts/Libs/requirejs/require.js" data-main="Scripts/Common"></script>
 </body>
 </html>

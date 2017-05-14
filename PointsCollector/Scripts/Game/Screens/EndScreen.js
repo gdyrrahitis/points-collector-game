@@ -94,7 +94,8 @@ define(["easeljs"], function () {
             _Container.removeAllChildren();
 
             //removes the container last
-            _Stage.removeChildren(_Container);
+            _Stage.removeAllChildren();
+            _Stage.update();
         }
     };
 

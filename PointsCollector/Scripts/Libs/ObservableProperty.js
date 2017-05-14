@@ -28,6 +28,11 @@ define([], function () {
         this.onChanged = function (callback) {
             evtPropChanged.push(callback);
         }
+
+        this.unsubscribe = function() {
+            evtPropChanged = [];
+            evtPropChanging = [];
+        };
     };
 
     return Observable;

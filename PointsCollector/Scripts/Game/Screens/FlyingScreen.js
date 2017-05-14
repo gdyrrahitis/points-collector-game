@@ -43,6 +43,7 @@ define(["Game/Point", "Libs/ObservableProperty", "easeljs", "jquery", "pub_sub"]
                 //countdown ended
                 //publish the game over event
                 $.publish("game/end");
+                watch.unsubscribe();
                 return false;
             }
             return true;
@@ -168,7 +169,6 @@ define(["Game/Point", "Libs/ObservableProperty", "easeljs", "jquery", "pub_sub"]
             if (tickerTime !== time && (gameTime - tickerTime) >= 0) {
                 time = tickerTime;
                 watch.time(gameTime - tickerTime);
-                console.log(gameTime - tickerTime);
             }
         }
 
