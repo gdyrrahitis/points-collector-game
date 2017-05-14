@@ -6,7 +6,7 @@ Use your mouse or touch screen to navigate the spacecraft. Collect points, as ma
 
 [http://spaceship-easel.azurewebsites.net/](http://spaceship-easel.azurewebsites.net/)
 
-![Game screen](https://raw.githubusercontent.com/gdyrrahitis/points-collector-game/master/screenshot.png)
+![Game screen](https://raw.githubusercontent.com/gdyrrahitis/points-collector-game/0887ac2d9044ba2df93d8631de00914ecc448b17/screenshot.png)
 
 ## Instructions
 
