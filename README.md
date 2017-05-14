@@ -6,6 +6,8 @@ Use your mouse or touch screen to navigate the spacecraft. Collect points, as ma
 
 [http://spaceship-easel.azurewebsites.net/](http://spaceship-easel.azurewebsites.net/)
 
+![Game screen](https://raw.githubusercontent.com/gdyrrahitis/points-collector-game/master/screenshot.png)
+
 ## Instructions
 
 Move your mouse to change the spacecraft direction.
@@ -18,6 +20,6 @@ Don't be afraid to go out of bounds, it will pop out from the opposite direction
 
 From game toolbar, choose `Start Game` to begin playing.
 
-After a game ends, you can restart the game with the reset button, located in the middle.
+After a game ends, you can restart the game with the `reset` button, located in the middle.
 
-To toggle audio, press the third button in the toolbar.
+To `toggle` audio, press the third button in the toolbar.
